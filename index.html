@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Calculator</title>
+</head>
+<body class="bg-gray-900">
+  <div class="flex flex-col justify-center items-center my-20"><!-- container -->
+    <div class="my-4">
+      <div class="js-show-input p-4 font-bold text-xl rounded-lg focus:outline-none text-center mb-4 bg-white w-60 h-14 text-black">ip / op</div>
+    </div><!-- show input div -->
+    <!-- buttons div -->
+    <div>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('1');">1</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('2');">2</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('3');">3</button>
+      <button class="w-20 h-20 text-xl font-bold bg-orange-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-orange-500 active:bg-orange-400" onclick="calc('+');">+</button>
+    </div>
+    <div>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('4');">4</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('5');">5</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('6');">6</button>
+      <button class="w-20 h-20 text-xl font-bold bg-orange-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-orange-500 active:bg-orange-400" onclick="calc('-');">-</button>
+    </div>
+    <div>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('7');">7</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('8');">8</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('9');">9</button>
+      <button class="w-20 h-20 text-xl font-bold bg-orange-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-orange-500 active:bg-orange-400" onclick="calc('*');">*</button>
+    </div>
+    <div>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('0');">0</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calc('.');">.</button>
+      <button class="w-20 h-20 text-xl font-bold bg-gray-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-gray-500 active:bg-gray-400" onclick="calcTotal();">=</button>
+      <button class="w-20 h-20 text-xl font-bold bg-orange-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-orange-500 active:bg-orange-400" onclick="calc('/');">/</button>
+    </div>
+    <div class="flex justify-center items-center">
+      <button class="w-20 h-20 text-md font-bold bg-red-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-red-500 active:bg-red-400" onclick="clearResults();">Clear Screen</button>
+      <button class="w-20 h-20 text-md font-bold bg-green-600 rounded-full text-white text-center items-center m-1 cursor-pointer transition duration-150 hover:bg-green-500 active:bg-green-400" onclick="getLastResult();">Get Last Result</button>
+    </div>
+    <!-- end buttons div -->
+  </div><!-- end container -->
+
+  <script src="app.js"></script>
+</body>
+</html>
